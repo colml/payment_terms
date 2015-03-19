@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+    <config>
+        <modules>
+           <CP_PaymentTerms>
+    <!-- declare module's version information for database updates -->
+              <version>0.1.0</version>
+           </CP_PaymentTerms>
+        </modules>
+
+        <global>
+    <!-- IMPORTANT: if you use your own namespace (i.e. CompanyName) you also have to declare blocks group for new module. See topic: http://www.magentocommerce.com/boards/viewthread/22416/#t102732 -->
+
+        <blocks>
+            <paymentterms>
+                <class>CP_PaymentTerms_Block</class>
+            </paymentterms>
+        </blocks>
+
+
+    <!-- declare model group for new module -->
+            <models>
+    <!-- model group alias to be used in Mage::getModel('paymentterms/...') -->
+                <paymentterms>
+    <!-- base class name for the model group -->
+                    <class>CP_PaymentTerms_Model</class>
+                </paymentterms>
+            </models>
+
+        <helpers>
+                <paymentterms>
+                    <class>CP_PaymentTerms_Helper</class>
+                </paymentterms>
+        </helpers>
+
+        </global>
+     
+    <!-- declare default configuration values for this module -->
+        <default>
+    <!-- 'payment' configuration section (tab) -->
+            <payment>
+
+                <advance>
+                    <active>0</active>
+                    <model>paymentterms/advance</model>
+                    <order_status>processing</order_status>
+                    <title>Pay in advance</title>
+                    <allowspecific>0</allowspecific>
+                    <group>offline</group>
+                    <sort_order>1</sort_order>
+                </advance>
+
+                <thirtydays>
+                    <active>0</active>
+                    <model>paymentterms/thirtydays</model>
+                    <order_status>processing</order_status>
+                    <title>Pay in 30 days</title>
+                    <allowspecific>0</allowspecific>
+                    <group>offline</group>
+                    <sort_order>2</sort_order>
+                </thirtydays>
+                
+                <sixtydays>
+                    <active>0</active>
+                    <model>paymentterms/sixtydays</model>
+                    <order_status>processing</order_status>
+                    <title>Pay in 60 days</title>
+                    <allowspecific>0</allowspecific>
+                    <group>offline</group>
+                    <sort_order>3</sort_order>
+                </sixtydays>
+
+                <ninetydays>
+                    <active>0</active>
+                    <model>paymentterms/ninetydays</model>
+                    <order_status>processing</order_status>
+                    <title>Pay in 90 days</title>
+                    <allowspecific>0</allowspecific>
+                    <group>offline</group>
+                    <sort_order>4</sort_order>
+                </ninetydays>
+
+                <onetwentydays>
+                    <active>0</active>
+                    <model>paymentterms/onetwentydays</model>
+                    <order_status>processing</order_status>
+                    <title>Pay in 120 days</title>
+                    <allowspecific>0</allowspecific>
+                    <group>offline</group>
+                    <sort_order>5</sort_order>
+                </onetwentydays>
+
+                <onefiftydays>
+                    <active>0</active>
+                    <model>paymentterms/onefiftydays</model>
+                    <order_status>processing</order_status>
+                    <title>Pay in 150 days</title>
+                    <allowspecific>0</allowspecific>
+                    <group>offline</group>
+                    <sort_order>6</sort_order>
+                </onefiftydays>
+
+                <oneeightydays>
+                    <active>0</active>
+                    <model>paymentterms/oneeightydays</model>
+                    <order_status>processing</order_status>
+                    <title>Pay in 180 days</title>
+                    <allowspecific>0</allowspecific>
+                    <group>offline</group>
+                    <sort_order>7</sort_order>
+                </oneeightydays>
+
+             </payment>
+        </default>
+    </config>
